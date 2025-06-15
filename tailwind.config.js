@@ -1,3 +1,6 @@
+import typography from "@tailwindcss/typography";
+import daisyui from "daisyui";
+
 export default {
   content: ["index.html", "./src/**/*.{js,jsx,ts,tsx,vue,html}"],
   theme: {
@@ -13,5 +16,5 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [typography, daisyui],
 };
