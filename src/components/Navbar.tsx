@@ -86,13 +86,13 @@ export default function Navbar() {
             className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li>
-              <a>About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a>Professional</a>
+              <a href="/professional">Professional</a>
             </li>
             <li>
-              <a>Writings</a>
+              <a href="/writings">Writings</a>
             </li>
           </ul>
         </div>
