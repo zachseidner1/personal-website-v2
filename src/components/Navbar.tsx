@@ -64,23 +64,44 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+          <div tabIndex={0} role="button" className="btn btn-circle btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {" "}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />{" "}
+            </svg>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>About</a></li>
-            <li><a>Professional</a></li>
-            <li><a>Writings</a></li>
+            className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+          >
+            <li>
+              <a>About</a>
+            </li>
+            <li>
+              <a>Professional</a>
+            </li>
+            <li>
+              <a>Writings</a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center transition-transform">
         <div className="group flex flex-row items-center">
-          <div className="text-xl font-semibold select-none">Zach Seidner</div>
+          <div className="select-none text-xl font-semibold">Zach Seidner</div>
           <div className="w-2" />
-          <div className="relative translate-x-[-10px] transform text-2xl opacity-0 transition-all duration-500 group-hover:block group-hover:translate-x-0 group-hover:opacity-100 select-none">
+          <div className="relative translate-x-[-10px] transform select-none text-2xl opacity-0 transition-all duration-500 group-hover:block group-hover:translate-x-0 group-hover:opacity-100">
             👋
           </div>
         </div>
