@@ -37,8 +37,8 @@ const ExternalLinkIcon = () => (
 );
 
 type ProjectLinks = {
-  github?: string; // The '?' makes this property optional
-  live?: string; // This one is also optional
+  github?: string;
+  live?: string;
 };
 
 export type ProjectCardProps = {
@@ -59,66 +59,68 @@ const ProjectCard = ({
   links,
 }: ProjectCardProps) => {
   return (
-    <div className="card mb-8 bg-base-100 shadow-xl lg:card-side">
-      {/* Project Image */}
-      <figure className="lg:w-1/3">
+    // Main container still uses a 4-column grid, but the element order is changed.
+    <div className="mb-12 grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-4">
+      {/* Image Column (now first, spans 1 of 4 columns) */}
+      <div className="md:col-span-1">
         <img
           src={imageUrl}
           alt={`${title} screenshot`}
-          className="h-full w-full object-cover"
+          className="rounded-lg object-cover shadow-md"
         />
-      </figure>
+      </div>
 
-      {/* Card Body */}
-      <div className="card-body lg:w-2/3">
-        <div className="flex items-start justify-between">
-          {/* Title */}
-          <h2 className="card-title text-2xl font-bold">{title}</h2>
-
-          {/* Links with SVGs */}
-          {links.map((link) => (
-            <>
-              {link?.github && (
-                <a
-                  href={link.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-square btn-ghost"
-                >
-                  <GithubIcon />
-                </a>
-              )}
-              {link?.live && (
-                <a
-                  href={link.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-square btn-ghost"
-                >
-                  <ExternalLinkIcon />
-                </a>
-              )}
-            </>
-          ))}
-          <div className="flex space-x-2"></div>
-        </div>
-
-        <time className="-mt-2 mb-2 block text-sm font-medium text-base-content/70">
-          {date}
-        </time>
-        {/* Description */}
-        <p className="mt-2 text-base-content/80">{description}</p>
-
-        <div className="card-actions mt-4 justify-start">
-          {/* Badges for Technologies */}
-          <div className="flex flex-wrap gap-2">
-            {techBadges.map((tech) => (
-              <div key={tech} className="badge badge-outline">
-                {tech}
+      {/* Content Column (now second, spans 2 of 4 columns) */}
+      <div className="md:col-span-2">
+        {/* Title and Links */}
+        <div className="mb-2 flex items-center gap-4">
+          <h3 className="text-xl font-bold text-base-content">{title}</h3>
+          <div className="flex flex-row gap-2">
+            {links.map((link, index) => (
+              <div key={index}>
+                {link?.github && (
+                  <a
+                    href={link.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base-content/80 transition-colors hover:text-primary"
+                    aria-label={`${title} GitHub Repository`}
+                  >
+                    <GithubIcon />
+                  </a>
+                )}
+                {link?.live && (
+                  <a
+                    href={link.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base-content/80 transition-colors hover:text-primary"
+                    aria-label={`${title} Live Demo`}
+                  >
+                    <ExternalLinkIcon />
+                  </a>
+                )}
               </div>
             ))}
           </div>
         </div>
+
+        {/* Description */}
+        <p className="mb-4 text-base-content/80">{description}</p>
+
+        {/* Tech Badges */}
+        <div className="flex flex-wrap gap-2">
+          {techBadges.map((tech) => (
+            <div key={tech} className="badge badge-outline">
+              {tech}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Date Column (now last, spans 1 of 4 columns, and is right-aligned on medium+ screens) */}
+      <div className="md:col-span-1 md:text-right">
+        <time className="font-medium text-base-content/70">{date}</time>
       </div>
     </div>
   );

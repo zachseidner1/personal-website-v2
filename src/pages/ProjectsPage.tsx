@@ -1,92 +1,82 @@
-// src/components/ProjectsPage.js
-
-import ProjectCard, { ProjectCardProps } from "../components/ProjectCard";
-
-// You can easily update your projects by modifying this array
-const projectsData: ProjectCardProps[] = [
-  {
-    title: "Personal Portfolio Website",
-    description:
-      "A responsive personal website built to showcase my skills and projects. Designed with a clean and modern UI using React, Tailwind CSS, and DaisyUI.",
-    date: "06/15/2025",
-    imageUrl:
-      "https://via.placeholder.com/600x400/a78bfa/ffffff?text=Project+One",
-    techBadges: [
-      "React",
-      "Tailwind CSS",
-      "DaisyUI",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-    ],
-    links: [
-      {
-        github: "#", // Replace with your GitHub link
-        live: "#", // Replace with your live demo link
-      },
-    ],
-  },
-  {
-    title: "E-Commerce Platform",
-    date: "06/15/2025",
-
-    description:
-      "A full-featured e-commerce site with product listings, a shopping cart, and a checkout process. The backend is powered by Node.js and connects to a PostgreSQL database.",
-    imageUrl:
-      "https://via.placeholder.com/600x400/60a5fa/ffffff?text=Project+Two",
-    techBadges: ["React", "Node.js", "Express", "PostgreSQL", "Redux", "JWT"],
-    links: [
-      {
-        github: "#",
-        live: "#",
-      },
-    ],
-  },
-  {
-    title: "Data Visualization Dashboard",
-    date: "06/15/2025",
-
-    description:
-      "An interactive dashboard for visualizing complex datasets. Features dynamic charts and filters, built with D3.js for powerful and customizable graphs.",
-    imageUrl:
-      "https://via.placeholder.com/600x400/f87171/ffffff?text=Project+Three",
-    techBadges: ["JavaScript", "D3.js", "API", "SASS"],
-    links: [
-      {
-        github: "#",
-      },
-    ],
-  },
-];
+import { experienceData, projectsData } from "@/data/portfolioData";
+import ProjectCard from "../components/ProjectCard";
+// Import motion and the Variants type from framer-motion
+import { motion, type Variants } from "framer-motion";
 
 const ProjectsPage = () => {
+  // Explicitly type cardVariants with the Variants type
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-base-200 px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         {/* Page Title and Description */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-extrabold text-base-content lg:text-5xl">
+        <div className="mb-12">
+          <h1 className="text-center text-4xl font-extrabold text-base-content lg:text-5xl">
             Professional
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-base-content/80">
             Here is my work & technical experience, along with some of the
             projects I've worked on. You can find more on my GitHub page.
           </p>
         </div>
 
-        {/* Grid of Project Cards */}
+        {/* Experience Section */}
+        <div className="mb-16">
+          <h2 className="mb-8 text-3xl font-bold text-base-content lg:text-4xl">
+            Experience
+          </h2>
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1">
+            {experienceData.map((experience, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={cardVariants}
+              >
+                <ProjectCard {...experience} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects Section */}
         <div>
-          {projectsData.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              imageUrl={project.imageUrl}
-              techBadges={project.techBadges}
-              links={project.links}
-              date={project.date}
-            />
-          ))}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+          >
+            <h2 className="mb-8 text-3xl font-bold text-base-content lg:text-4xl">
+              Projects
+            </h2>
+          </motion.div>
+
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1">
+            {projectsData.map((project, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={cardVariants}
+              >
+                <ProjectCard {...project} />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
