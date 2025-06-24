@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import RootLayout from "./components/RootLayout";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -17,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: "first-blog-post", element: <MyFirstBlogPost /> },
       { path: "about", element: <About /> },
+      { path: "", element: <Navigate to="/about" /> },
       { path: "professional", element: <ProjectsPage /> },
     ],
   },
