@@ -7,15 +7,13 @@ export default function WritingsList({
 }: {
   writingsList: WritingProps[];
 }) {
-  // 1. Sort writings chronologically in descending order (newest first).
-  // It's good practice to create a copy before sorting a prop array.
+  // TODO: write this logic myself when I have the time
   const sortedWritings = [...writingsList].sort(
     (a, b) => b.date.getTime() - a.date.getTime(),
   );
 
   const writingsByMonth: { [key: string]: WritingProps[] } = {};
 
-  // 2. Group writings by month and year.
   sortedWritings.forEach((writing) => {
     const monthYear = writing.date.toLocaleDateString("en-US", {
       year: "numeric",
