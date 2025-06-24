@@ -1,12 +1,12 @@
-export default function Writing({
-  title,
-  children,
-}: {
+export type WritingProps = {
   title: string;
+  date: Date;
   children: React.ReactNode;
-}) {
+};
+
+export default function Writing({ title, children }: WritingProps) {
   return (
-    <div className="w-full h-full">
+    <div className="h-full w-full">
       <article className="prose prose-sm mx-auto px-4 py-8 sm:prose lg:prose-lg">
         <h2>{title}</h2>
         <hr />
