@@ -4,23 +4,29 @@ import { useEffect, useState } from "react";
 export default function Navbar() {
   const [currentTheme, setCurrentTheme] = useState("light");
 
+  // Define navigation links as an array for easier maintenance
+  const navLinks = [
+    { href: "/about", label: "About" },
+    { href: "/professional", label: "Professional" },
+    { href: "/writings", label: "Writings" },
+  ];
+
   useEffect(() => {
     // https://medium.com/hypersphere-codes/detecting-system-theme-in-javascript-css-react-f6b961916d48
-    // too lazy to do a listener
     const isDarkMode = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
     const theme = localStorage.getItem(THEME_KEY);
-
     const userTheme = theme ?? (isDarkMode ? "dark" : "light");
     setTheme(userTheme);
   }, []);
 
   const toggleTheme = () => {
     const currentTheme = localStorage.getItem(THEME_KEY);
-    const newTheme = currentTheme == "light" ? "dark" : "light";
+    const newTheme = currentTheme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
+
   const setTheme = (theme: string) => {
     document.documentElement.setAttribute(THEME_KEY, theme);
     localStorage.setItem(THEME_KEY, theme);
@@ -43,6 +49,7 @@ export default function Navbar() {
       />
     </svg>
   );
+
   const moonIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +68,10 @@ export default function Navbar() {
   );
 
   return (
-    <div className="navbar">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <div className="dropdown">
+        {/* Dropdown Menu for mobile screens (visible on small, hidden on medium and up) */}
+        <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-circle btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,42 +80,54 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h7"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
             tabIndex={0}
             className="menu dropdown-content menu-sm z-20 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/professional">Professional</a>
-            </li>
-            <li>
-              <a href="/writings">Writings</a>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Full Menu for wider screens (hidden on small, visible on medium and up) */}
+        <div className="hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="btn btn-ghost text-base">
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
+
       <div className="navbar-center transition-transform">
         <div className="group flex flex-row items-center">
-          <div className="select-none text-xl font-semibold">Zach Seidner</div>
+          <a href="/" className="select-none text-xl font-semibold">
+            Zach Seidner
+          </a>
           <div className="w-2" />
           <div className="relative translate-x-[-10px] transform select-none text-2xl opacity-0 transition-all duration-500 group-hover:block group-hover:translate-x-0 group-hover:opacity-100">
             👋
           </div>
         </div>
       </div>
+
       <div className="navbar-end">
-        <button className="btn btn-ghost" onClick={toggleTheme}>
+        <button className="btn btn-circle btn-ghost" onClick={toggleTheme}>
           {currentTheme === "dark" ? sunIcon : moonIcon}
         </button>
       </div>
