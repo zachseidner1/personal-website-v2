@@ -1,13 +1,15 @@
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar";
 
-export default function RootLayout({ children }: { children?: React.ReactNode; }) {
+export default function RootLayout({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   return (
-    <div className="flex flex-col h-screen overflow-hidden">
+    <div className="flex h-dvh flex-col overflow-hidden">
       <Navbar />
-      <main className="flex-1 overflow-y-auto">
-        {children || <Outlet />}
-      </main>
+      <main className="flex-1 overflow-y-auto">{children || <Outlet />}</main>
     </div>
   );
 }
