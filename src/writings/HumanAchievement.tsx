@@ -55,9 +55,9 @@ export default function HumanAchievement() {
       </p>
       <p>
         All of this considered, what can I do other than say "Oh well", and move
-        on? With the perhaps delusional hope that if I keep at it, perhaps I can
-        produce something I feel satisfied with. Make a small contribution to
-        our universe and culture. I can only hope.
+        on? With the delusional hope that if I keep at it, perhaps I can produce
+        something I feel satisfied with. Make a small contribution to our
+        universe and culture. I can only hope.
       </p>
     </>
   );
