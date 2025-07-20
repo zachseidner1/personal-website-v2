@@ -13,4 +13,10 @@ export const writingsList: WritingProps[] = [
     children: <HumanAchievement />,
     date: new Date(1751635869000),
   },
+  /*
+  {
+    title: "The Power of a To-do List",
+    children: <ThePowerOfATodoList />,
+    date: new Date(1753025705000),
+  },*/
 ];
