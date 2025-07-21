@@ -19,11 +19,10 @@ export default function ThePowerOfATodoList() {
         After a tough day of assigning Claude code all my tasks at work, going
         to the gym, and then cooking dinner, it's 8pm. If I'm lucky, about 4
         hours remain in my day. Hypothetically, one of the worst ways I could
-        spend this evening would be at a desk, feeling anxious, scrolling around
-        my home screen on my iPhone, checking the weather, and then reading for
-        10 minutes before sleeping. Unfortunately, such an evening is not
-        hypothetical at all. Last summer, about half of my evenings were spent
-        this way.
+        spend this evening would be at a desk, feeling anxious, clicking around
+        on my desktop, and then reading for 10 minutes before sleeping. The
+        unfortunate reality is that about half of my evenings were spent this
+        way last summer.
       </p>
       <p>
         When you have big ideas, but you're tired, it can feel overwhelming.
@@ -34,26 +33,29 @@ export default function ThePowerOfATodoList() {
       <p>
         This summer, I found a way to break down those big ideas into smaller,
         more approachable parts. A way to be more forgiving with myself, when I
-        am genuinely too tired to focus on those big ideas. And a way to avoid
-        wasting time. I brought back my college to-do list.
+        am genuinely too tired to focus on those big ideas. A way to avoid
+        wasting time. I repurposed my college to-do list into a life to-do list.
+      </p>
+
+      <ul>
+        <li>Write biweekly blog</li>
+        <li>Look into meal plan for next semester</li>
+        <li>Watch The Boy and The Heron</li>
+        <li>Plan to go to the MET rooftop</li>
+        <li>Outline KMP app idea</li>
+      </ul>
+      <p>
+        You'll notice on this snippet of my to-do list that not all of these
+        tasks are "productive", nor are they all ambitious side projects.
+        They're simply things I wish to do this summer. If I'm feeling energized
+        and excited, I can tackle something more ambitious. Otherwise, I can
+        take on something smaller or more relaxing.
       </p>
       <p>
-        Using a to-do list, even for the "unproductive" tasks of your life,
-        helps to reframe what a satisfying day looks like. Before using a to-do
-        list, trying to have a productive day felt overwhelming. You're telling
-        me I'm supposed to work for 8 hours straight, then get home, go to the
-        gym, cook dinner, then still have energy left for writing, or working on
-        a side project?
-      </p>
-      <p>
-        Having a to-do list put things into perspective for me. If I didn't feel
-        like doing a certain task, I could just do a different one. The other
-        task is still on the list. I'll get to it eventually.
-      </p>
-      <p>
-        There's also the satisfaction of being able to cross items off the list.
-        Then at the end of the day you can look back at what you accomplished,
-        satisfied.
+        This helps eliminate the periods of indecision. Of scrolling back and
+        forth. Of distracting myself from the things I truly want to do.
+        Ironically, framing enjoyable parts of my life as work has made me
+        happier.
       </p>
     </>
   );
