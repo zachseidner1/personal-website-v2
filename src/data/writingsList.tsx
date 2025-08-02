@@ -1,6 +1,7 @@
 import { WritingProps } from "@/pages/Writing";
 import HumanAchievement from "@/writings/HumanAchievement";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
+import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
 import ThePowerOfATodoList from "@/writings/ThePowerOfATodoList";
 
 export const writingsList: WritingProps[] = [
@@ -19,5 +20,10 @@ export const writingsList: WritingProps[] = [
     title: "The Power of a To-do List",
     children: <ThePowerOfATodoList />,
     date: new Date(1753025705000),
+  },
+  {
+    title: "Reflecting on My Budding Career in SWE",
+    children: <ReflectingOnMyBuddingCareerInSWE />,
+    date: new Date(1754098745000),
   },
 ];
