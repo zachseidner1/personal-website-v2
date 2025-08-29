@@ -1,4 +1,5 @@
 import { WritingProps } from "@/pages/Writing";
+import FocusAreasForSeniorYear from "@/writings/FocusAreasForSeniorYear";
 import HumanAchievement from "@/writings/HumanAchievement";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
@@ -25,5 +26,10 @@ export const writingsList: WritingProps[] = [
     title: "Reflecting on My Budding Career in SWE",
     children: <ReflectingOnMyBuddingCareerInSWE />,
     date: new Date(1754098745000),
+  },
+  {
+    title: "Focus Areas for Senior Year",
+    children: <FocusAreasForSeniorYear />,
+    date: new Date(1756129309000),
   },
 ];
