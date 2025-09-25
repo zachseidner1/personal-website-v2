@@ -1,6 +1,7 @@
 import { WritingProps } from "@/pages/Writing";
 import FocusAreasForSeniorYear from "@/writings/FocusAreasForSeniorYear";
 import HumanAchievement from "@/writings/HumanAchievement";
+import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAWeek";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
 import ThePowerOfATodoList from "@/writings/ThePowerOfATodoList";
@@ -31,5 +32,10 @@ export const writingsList: WritingProps[] = [
     title: "Focus Areas for Senior Year",
     children: <FocusAreasForSeniorYear />,
     date: new Date(1756129309000),
+  },
+  {
+    title: "I Did 1 New Thing Every Day For a Week",
+    children: <IDid1NewThingEverydayForAWeek />,
+    date: new Date(1758814910000),
   },
 ];
