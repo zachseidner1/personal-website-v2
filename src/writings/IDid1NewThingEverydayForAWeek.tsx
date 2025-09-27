@@ -33,8 +33,11 @@ export default function IDid1NewThingEverydayForAWeek() {
           Studied in Barnes hall (random academic building I've never been in).
         </li>
         <li>
-          Filmed a 30 minute podcast episode (link to podcast coming soon,
-          probably), then participated in a photo shoot for the album cover.
+          Filmed a 30 minute{" "}
+          <a href="https://youtu.be/AGnQNFP3zbo" target="_blank">
+            podcast episode
+          </a>
+          , then participated in a photo shoot for the album cover.
         </li>
         <li>
           Skipped Existentialism lecture to go to the Cornell MEng Expo and get
