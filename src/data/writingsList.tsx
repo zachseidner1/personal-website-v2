@@ -4,6 +4,7 @@ import HumanAchievement from "@/writings/HumanAchievement";
 import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAWeek";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
+import TacoTuesdays from "@/writings/TacoTuesdays";
 import ThePowerOfATodoList from "@/writings/ThePowerOfATodoList";
 
 export const writingsList: WritingProps[] = [
@@ -38,4 +39,10 @@ export const writingsList: WritingProps[] = [
     children: <IDid1NewThingEverydayForAWeek />,
     date: new Date(1758814910000),
   },
+  {
+    title: "Taco Tuesdays",
+    description: "The first chapter to a novella / short story I am writing, depending on when I decide to conclude it.",
+    children: <TacoTuesdays />,
+    date: new Date(1760303640000),
+  }
 ];
