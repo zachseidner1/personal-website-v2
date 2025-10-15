@@ -1,5 +1,6 @@
 import { WritingProps } from "@/pages/Writing";
 import FocusAreasForSeniorYear from "@/writings/FocusAreasForSeniorYear";
+import Forgetting from "@/writings/Forgetting";
 import HumanAchievement from "@/writings/HumanAchievement";
 import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAWeek";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
@@ -41,8 +42,14 @@ export const writingsList: WritingProps[] = [
   },
   {
     title: "Taco Tuesdays",
-    description: "The first chapter to a novella / short story I am writing, depending on when I decide to conclude it.",
+    description:
+      "The first chapter to a novella / short story I am writing, depending on when I decide to conclude it.",
     children: <TacoTuesdays />,
     date: new Date(1760303640000),
-  }
+  },
+  {
+    title: "Forgetting",
+    children: <Forgetting />,
+    date: new Date(1760554132000),
+  },
 ];
