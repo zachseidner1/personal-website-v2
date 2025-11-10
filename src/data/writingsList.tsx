@@ -4,6 +4,7 @@ import Forgetting from "@/writings/Forgetting";
 import HumanAchievement from "@/writings/HumanAchievement";
 import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAWeek";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
+import OnIdeation from "@/writings/OnIdeation";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
 import TacoTuesdays from "@/writings/TacoTuesdays";
 import ThePowerOfATodoList from "@/writings/ThePowerOfATodoList";
@@ -51,5 +52,10 @@ export const writingsList: WritingProps[] = [
     title: "Forgetting",
     children: <Forgetting />,
     date: new Date(1760554132000),
+  },
+  {
+    title: "On Ideation",
+    children: <OnIdeation />,
+    date: new Date(1762815325000),
   },
 ];
