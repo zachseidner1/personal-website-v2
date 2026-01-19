@@ -42,9 +42,11 @@ export default function About() {
               <li className="mb-1">
                 <span className="font-semibold">Building:</span> Groom My Room,
                 an upcoming{" "}
-                <a target="_blank" href="https://rocketpenguin.net/">
-                  Rocket Penguin
-                </a>{" "}
+                <u>
+                  <a target="_blank" href="https://rocketpenguin.net/">
+                    Rocket Penguin
+                  </a>{" "}
+                </u>
                 game
               </li>
               <li>
