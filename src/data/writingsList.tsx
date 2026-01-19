@@ -6,8 +6,8 @@ import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAW
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
 import OnIdeation from "@/writings/OnIdeation";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
-import TacoTuesdays from "@/writings/TacoTuesdays";
 import ThePowerOfATodoList from "@/writings/ThePowerOfATodoList";
+import WhyIStoppedBlogging from "@/writings/WhyIStoppedBlogging";
 
 export const writingsList: WritingProps[] = [
   {
@@ -42,13 +42,6 @@ export const writingsList: WritingProps[] = [
     date: new Date(1758814910000),
   },
   {
-    title: "Taco Tuesdays",
-    description:
-      "The first chapter to a novella / short story I am writing, depending on when I decide to conclude it.",
-    children: <TacoTuesdays />,
-    date: new Date(1760303640000),
-  },
-  {
     title: "Forgetting",
     children: <Forgetting />,
     date: new Date(1760554132000),
@@ -57,5 +50,10 @@ export const writingsList: WritingProps[] = [
     title: "On Ideation",
     children: <OnIdeation />,
     date: new Date(1762815325000),
+  },
+  {
+    title: "Why I Stopped Blogging (and will only return very infrequently)",
+    children: <WhyIStoppedBlogging />,
+    date: new Date(1768833959000),
   },
 ];

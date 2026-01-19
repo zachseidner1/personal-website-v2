@@ -16,8 +16,7 @@ export default function WritingsPage({
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-base-content/80">
             Here are some of the writings I'm willing to share with the
-            internet. If I somehow manage to not get too busy with other things,
-            this page might be updated biweekly!
+            internet.
           </p>
         </div>
       </div>
