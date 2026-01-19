@@ -33,19 +33,23 @@ export default function About() {
             <h2 className="mb-4 text-2xl font-semibold">⏰ Currently...</h2>
             <ul className="list-disc pl-5 text-lg text-base-content/80">
               <li className="mb-1">
-                <span className="font-semibold">Reading:</span> The Confederacy
-                of Dunces
+                <span className="font-semibold">Reading:</span> The Collapse of
+                Horses
               </li>
               <li className="mb-1">
-                <span className="font-semibold">Playing:</span> Deltarune
+                <span className="font-semibold">Playing:</span> Balatro
               </li>
               <li className="mb-1">
-                <span className="font-semibold">Building:</span> V2 of my
-                personal website
+                <span className="font-semibold">Building:</span> Groom My Room,
+                an upcoming{" "}
+                <a target="_blank" href="https://rocketpenguin.net/">
+                  Rocket Penguin
+                </a>{" "}
+                game
               </li>
               <li>
-                <span className="font-semibold">Listening to:</span> Bossa Nova,
-                Rock, Pop, Minecraft OST 🔥
+                <span className="font-semibold">Listening to:</span> Kpop, rock,
+                rap, video game soundtracks 🔥
               </li>
             </ul>
           </div>
