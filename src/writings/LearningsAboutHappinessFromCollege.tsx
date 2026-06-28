@@ -7,8 +7,7 @@ export default function LearningsAboutHappinessFromCollege() {
         a pillow arched my head forward toward my phone screen. I was watching
         Rick and Morty, as pseudo-intellectual 13-year-old boys do. Rick made an
         off-handed comment about how one day the sun was going to eat the Earth
-        and everything and everyone would be forgotten. It stuck with me. After
-        the show, I started to think about it more. Up until that point, I had
+        and everything and everyone would be forgotten. It stuck with me. Up until that point, I had
         this rose-colored mindset that I could make a real, lasting impact on
         the world. Though the inevitably of time to erase everything that comes
         in its way was a form of counter evidence for my younger self.
