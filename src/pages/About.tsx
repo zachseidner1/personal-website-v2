@@ -33,8 +33,7 @@ export default function About() {
             <h2 className="mb-4 text-2xl font-semibold">⏰ Currently...</h2>
             <ul className="list-disc pl-5 text-lg text-base-content/80">
               <li className="mb-1">
-                <span className="font-semibold">Reading:</span> The Collapse of
-                Horses
+                <span className="font-semibold">Reading:</span> Tomorrow and Tomorrow and Tomorrow
               </li>
               <li className="mb-1">
                 <span className="font-semibold">Playing:</span> Balatro

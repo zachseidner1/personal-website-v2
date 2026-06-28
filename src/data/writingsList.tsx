@@ -3,6 +3,7 @@ import FocusAreasForSeniorYear from "@/writings/FocusAreasForSeniorYear";
 import Forgetting from "@/writings/Forgetting";
 import HumanAchievement from "@/writings/HumanAchievement";
 import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAWeek";
+import LearningsAboutHappinessFromCollege from "@/writings/LearningsAboutHappinessFromCollege";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
 import OnIdeation from "@/writings/OnIdeation";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
@@ -56,4 +57,9 @@ export const writingsList: WritingProps[] = [
     children: <WhyIStoppedBlogging />,
     date: new Date(1768833959000),
   },
+  {
+    title: "Learnings About Happiness From College",
+    children: <LearningsAboutHappinessFromCollege />,
+    date: new Date(1782672904020),
+  }
 ];
