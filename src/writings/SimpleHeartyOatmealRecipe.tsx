@@ -21,7 +21,8 @@ export default function SimpleHeartyOatmealRecipe() {
         <li>1 teaspoon of organic peanut butter (crunchy vs smooth makes no difference) </li>
         <li>Pinch of cinnamon</li>
         <li>Dash of nutmeg</li>
-        <li>20 grams of raisins</li>
+        <li>10 grams of raisins</li>
+        <li>20 grams of walnuts</li>
         <li>1 cup of water</li>
       </ul>
       <h4>Instructions</h4>
@@ -33,7 +34,7 @@ export default function SimpleHeartyOatmealRecipe() {
           oatmeal, letting it melt and dissolve. Fold the oatmeal to allow it to
           cool evenly.
         </li>
-        <li>Add raisins, cinnamon, and nutmeg. Stir to combine.</li>
+        <li>Add raisins, walnuts, cinnamon, and nutmeg. Stir to combine.</li>
         <li>Let cool for a few minutes and enjoy!</li>
       </ol>
     </>
