@@ -7,6 +7,7 @@ import LearningsAboutHappinessFromCollege from "@/writings/LearningsAboutHappine
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
 import OnIdeation from "@/writings/OnIdeation";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
+import SimpleHeartyOatmealRecipe from "@/writings/SimpleHeartyOatmealRecipe";
 import ThePowerOfATodoList from "@/writings/ThePowerOfATodoList";
 import WhyIStoppedBlogging from "@/writings/WhyIStoppedBlogging";
 
@@ -61,5 +62,10 @@ export const writingsList: WritingProps[] = [
     title: "Learnings About Happiness From College",
     children: <LearningsAboutHappinessFromCollege />,
     date: new Date(1782672904020),
-  }
+  },
+  {
+    title: "Simple Hearty Oatmeal Recipe",
+    children: <SimpleHeartyOatmealRecipe />,
+    date: new Date(1782839608000),
+  },
 ];
