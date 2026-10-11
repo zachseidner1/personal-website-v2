@@ -5,6 +5,7 @@ import HumanAchievement from "@/writings/HumanAchievement";
 import IDid1NewThingEverydayForAWeek from "@/writings/IDid1NewThingEverydayForAWeek";
 import LearningsAboutHappinessFromCollege from "@/writings/LearningsAboutHappinessFromCollege";
 import MyFirstBlogPost from "@/writings/MyFirstBlogPost";
+import OnFear from "@/writings/OnFear";
 import OnIdeation from "@/writings/OnIdeation";
 import ReflectingOnMyBuddingCareerInSWE from "@/writings/ReflectingOnMyBuddingCareerInSWE";
 import SimpleHeartyOatmealRecipe from "@/writings/SimpleHeartyOatmealRecipe";
@@ -67,5 +68,10 @@ export const writingsList: WritingProps[] = [
     title: "Simple Hearty Oatmeal Recipe",
     children: <SimpleHeartyOatmealRecipe />,
     date: new Date(1782839608000),
+  },
+  {
+    title: "On Fear",
+    children: <OnFear />,
+    date: new Date(1791687601017),
   },
 ];
